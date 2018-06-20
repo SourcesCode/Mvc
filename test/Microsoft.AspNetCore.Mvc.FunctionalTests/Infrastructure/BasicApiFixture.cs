@@ -7,7 +7,7 @@ namespace Microsoft.AspNetCore.Mvc.FunctionalTests
 {
     public class BasicApiFixture : MvcTestFixture<Startup>
     {
-        // Do not leave .db file behind. Also, ensure added pet gets expected id (13) in subsequent runs.
+        // Do not leave .db file behind. Also, ensure added pet gets expected id (1) in subsequent runs.
         protected override void Dispose(bool disposing)
         {
             if (disposing)

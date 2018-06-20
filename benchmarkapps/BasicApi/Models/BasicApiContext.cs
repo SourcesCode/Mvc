@@ -24,121 +24,122 @@ namespace BasicApi.Models
         {
             base.OnModelCreating(modelBuilder);
 
-            var id = 1;
+            var id = -1;
             var categories = new[]
             {
-                new Category { Id = id++, Name = "Dogs" },
-                new Category { Id = id++, Name = "Cats" },
-                new Category { Id = id++, Name = "Rabbits" },
+                new Category { Id = id--, Name = "Dogs" },
+                new Category { Id = id--, Name = "Cats" },
+                new Category { Id = id--, Name = "Rabbits" },
                 new Category { Id = id, Name = "Lions" },
             };
 
-            id = 1;
+            id = -1;
+            var categoryId = -1;
             var pets = new[]
             {
                 new
                 {
                     Age = 1,
-                    CategoryId = 1,
+                    CategoryId = categoryId,
                     HasVaccinations = true,
-                    Id = id++,
+                    Id = id--,
                     Name = "Dogs1",
                     Status = "available",
                 },
                 new
                 {
                     Age = 1,
-                    CategoryId = 1,
+                    CategoryId = categoryId,
                     HasVaccinations = true,
-                    Id = id++,
+                    Id = id--,
                     Name = "Dogs2",
                     Status = "available",
                 },
                 new
                 {
                     Age = 1,
-                    CategoryId = 1,
+                    CategoryId = categoryId--,
                     HasVaccinations = true,
-                    Id = id++,
+                    Id = id--,
                     Name = "Dogs3",
                     Status = "available",
                 },
                 new
                 {
                     Age = 1,
-                    CategoryId = 2,
+                    CategoryId = categoryId,
                     HasVaccinations = true,
-                    Id = id++,
+                    Id = id--,
                     Name = "Cats1",
                     Status = "available",
                 },
                 new
                 {
                     Age = 1,
-                    CategoryId = 2,
+                    CategoryId = categoryId,
                     HasVaccinations = true,
-                    Id = id++,
+                    Id = id--,
                     Name = "Cats2",
                     Status = "available",
                 },
                 new
                 {
                     Age = 1,
-                    CategoryId = 2,
+                    CategoryId = categoryId--,
                     HasVaccinations = true,
-                    Id = id++,
+                    Id = id--,
                     Name = "Cats3",
                     Status = "available",
                 },
                 new
                 {
                     Age = 1,
-                    CategoryId = 3,
+                    CategoryId = categoryId,
                     HasVaccinations = true,
-                    Id = id++,
+                    Id = id--,
                     Name = "Rabbits1",
                     Status = "available",
                 },
                 new
                 {
                     Age = 1,
-                    CategoryId = 3,
+                    CategoryId = categoryId,
                     HasVaccinations = true,
-                    Id = id++,
+                    Id = id--,
                     Name = "Rabbits2",
                     Status = "available",
                 },
                 new
                 {
                     Age = 1,
-                    CategoryId = 3,
+                    CategoryId = categoryId--,
                     HasVaccinations = true,
-                    Id = id++,
+                    Id = id--,
                     Name = "Rabbits3",
                     Status = "available",
                 },
                 new
                 {
                     Age = 1,
-                    CategoryId = 4,
+                    CategoryId = categoryId,
                     HasVaccinations = true,
-                    Id = id++,
+                    Id = id--,
                     Name = "Lions1",
                     Status = "available",
                 },
                 new
                 {
                     Age = 1,
-                    CategoryId = 4,
+                    CategoryId = categoryId,
                     HasVaccinations = true,
-                    Id = id++,
+                    Id = id--,
                     Name = "Lions2",
                     Status = "available",
                 },
                 new
                 {
                     Age = 1,
-                    CategoryId = 4,
+                    CategoryId = categoryId,
                     HasVaccinations = true,
                     Id = id,
                     Name = "Lions3",
@@ -146,37 +147,37 @@ namespace BasicApi.Models
                 },
             };
 
-            id = 1;
+            id = -1;
             var images = new[]
             {
-                new { Id = id, PetId = id, Url = $"http://example.com/pets/{id++}_1.png" },
-                new { Id = id, PetId = id, Url = $"http://example.com/pets/{id++}_1.png" },
-                new { Id = id, PetId = id, Url = $"http://example.com/pets/{id++}_1.png" },
-                new { Id = id, PetId = id, Url = $"http://example.com/pets/{id++}_1.png" },
-                new { Id = id, PetId = id, Url = $"http://example.com/pets/{id++}_1.png" },
-                new { Id = id, PetId = id, Url = $"http://example.com/pets/{id++}_1.png" },
-                new { Id = id, PetId = id, Url = $"http://example.com/pets/{id++}_1.png" },
-                new { Id = id, PetId = id, Url = $"http://example.com/pets/{id++}_1.png" },
-                new { Id = id, PetId = id, Url = $"http://example.com/pets/{id++}_1.png" },
-                new { Id = id, PetId = id, Url = $"http://example.com/pets/{id++}_1.png" },
-                new { Id = id, PetId = id, Url = $"http://example.com/pets/{id++}_1.png" },
+                new { Id = id, PetId = id, Url = $"http://example.com/pets/{id--}_1.png" },
+                new { Id = id, PetId = id, Url = $"http://example.com/pets/{id--}_1.png" },
+                new { Id = id, PetId = id, Url = $"http://example.com/pets/{id--}_1.png" },
+                new { Id = id, PetId = id, Url = $"http://example.com/pets/{id--}_1.png" },
+                new { Id = id, PetId = id, Url = $"http://example.com/pets/{id--}_1.png" },
+                new { Id = id, PetId = id, Url = $"http://example.com/pets/{id--}_1.png" },
+                new { Id = id, PetId = id, Url = $"http://example.com/pets/{id--}_1.png" },
+                new { Id = id, PetId = id, Url = $"http://example.com/pets/{id--}_1.png" },
+                new { Id = id, PetId = id, Url = $"http://example.com/pets/{id--}_1.png" },
+                new { Id = id, PetId = id, Url = $"http://example.com/pets/{id--}_1.png" },
+                new { Id = id, PetId = id, Url = $"http://example.com/pets/{id--}_1.png" },
                 new { Id = id, PetId = id, Url = $"http://example.com/pets/{id}_1.png" },
             };
 
-            id = 1;
+            id = -1;
             var tags = new[]
             {
-                new { Id = id, PetId = id++, Name = "Tag1" },
-                new { Id = id, PetId = id++, Name = "Tag1" },
-                new { Id = id, PetId = id++, Name = "Tag1" },
-                new { Id = id, PetId = id++, Name = "Tag1" },
-                new { Id = id, PetId = id++, Name = "Tag1" },
-                new { Id = id, PetId = id++, Name = "Tag1" },
-                new { Id = id, PetId = id++, Name = "Tag1" },
-                new { Id = id, PetId = id++, Name = "Tag1" },
-                new { Id = id, PetId = id++, Name = "Tag1" },
-                new { Id = id, PetId = id++, Name = "Tag1" },
-                new { Id = id, PetId = id++, Name = "Tag1" },
+                new { Id = id, PetId = id--, Name = "Tag1" },
+                new { Id = id, PetId = id--, Name = "Tag1" },
+                new { Id = id, PetId = id--, Name = "Tag1" },
+                new { Id = id, PetId = id--, Name = "Tag1" },
+                new { Id = id, PetId = id--, Name = "Tag1" },
+                new { Id = id, PetId = id--, Name = "Tag1" },
+                new { Id = id, PetId = id--, Name = "Tag1" },
+                new { Id = id, PetId = id--, Name = "Tag1" },
+                new { Id = id, PetId = id--, Name = "Tag1" },
+                new { Id = id, PetId = id--, Name = "Tag1" },
+                new { Id = id, PetId = id--, Name = "Tag1" },
                 new { Id = id, PetId = id, Name = "Tag1" },
             };
 

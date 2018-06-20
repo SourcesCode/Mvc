@@ -138,7 +138,7 @@ namespace Microsoft.AspNetCore.Mvc.FunctionalTests
             Assert.NotEmpty(token);
 
             // Arrange 2
-            var request = new HttpRequestMessage(HttpMethod.Get, "/pet/1");
+            var request = new HttpRequestMessage(HttpMethod.Get, "/pet/-1");
             request.Headers.Add(HeaderNames.Authorization, $"Bearer {token}");
 
             // Act 2
@@ -217,7 +217,7 @@ namespace Microsoft.AspNetCore.Mvc.FunctionalTests
             Assert.Equal(HttpStatusCode.Created, response.StatusCode);
             var location = response.Headers.Location.ToString();
             Assert.NotNull(location);
-            Assert.EndsWith("/13", location);
+            Assert.EndsWith("/1", location);
         }
     }
 }
